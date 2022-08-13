@@ -1,0 +1,183 @@
+/*VARIABLES*/
+:root{
+    --font: 'Lato', sans-serif;
+    --firstColor: #171128;
+    --secondColor: #e87163;
+    --thirdColor: #4c4e4e;
+    --blackColor: #090a0a;
+    --whiteColor: #fff;
+}
+
+/* ############### DEFAULTS ############### */
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fbfdff;
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased; /* Makes the font look better (apple devices)*/
+}
+
+/* ############### GLOBALS ############### */
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.td-none{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ############### COMPONENTS ############### */
+header{
+    width: 100%;
+    height: 80px;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    height: inherit;
+}
+
+.logo-img{
+    width: 12rem;
+}
+
+header .nav-menu,
+header .nav-auth,
+header .nav-user{
+    height: 80px;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .nav-auth,
+header .nav-user{
+    width: 13rem;
+}
+
+header .nav-user{
+    justify-content: space-between;
+}
+
+
+header .nav-user .nav-item{
+    position: relative;
+}
+
+header .nav-menu .nav-item a{
+    color: var(--firstColor);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+header .nav-menu .nav-item a:hover{
+    color: var(--secondColor);
+}
+
+.active{
+    font-weight: 700;
+}
+
+header .nav-auth .sign-in a,
+header .nav-auth .sign-up a{
+    color: var(--secondColor);
+    padding: 5px 10px;
+    border: 2px solid var(--secondColor);
+    border-radius: 10px;
+    transition:  all ease 0.5s;
+}
+
+header .nav-auth .sign-in a:hover,
+header .nav-auth .sign-up a:hover{
+    color: var(--whiteColor);
+    background-color: var(--secondColor);
+}
+
+header .nav-user a{
+    display: block;
+    color: var(--firstColor);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 30px 0;
+}
+
+.nav-icon{
+    color: var(--firstColor);
+    margin-left: 5px;
+    transform: translateY(4px);
+}
+
+/*DROPDOWN*/
+
+header .nav-user .dropdown{
+    width: 190px;
+    position: absolute;
+    top: 80px;
+    left: -10px;
+    z-index: -10;
+    border-radius: 5px;
+    box-shadow: -1px -12px 28px 7px rgba(0,0,0,0.11);
+    -webkit-box-shadow: -1px -12px 28px 7px rgba(0,0,0,0.11);
+    -moz-box-shadow: -1px -12px 28px 7px rgba(0,0,0,0.11);
+    opacity: 0;
+    transform: translateY(35px);
+}
+
+header .nav-user .dropdown::after{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 15%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid var(--whiteColor);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+header .nav-user .dropdown li{
+    border-bottom: 1px solid #dfeef3;
+}
+
+header .nav-user .dropdown li:last-child{
+    border-bottom: 1px solid transparent;
+}
+
+.nav-user .dropdown a{
+    padding: 16px;
+}
+
+.nav-user .dropdown a:hover{
+    color: var(--secondColor);
+}
+
+/*DROPDOWN ANIMATION*/
+header .nav-user:hover .dropdown{
+    opacity: 1;
+    z-index: 5;
+    transform: translateY(0);
+    transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+
+
+
+
+
+/* ############### PAGES ############### */
