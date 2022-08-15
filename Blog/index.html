@@ -17,20 +17,23 @@
 <body>
     
     <header>
-        <a href="#" class="logo-wrapper">
-            <img class="logo-img" src="Horizontal-color-logo.png" alt="logo">
-        </a>
+        <span role="button" class="menu-icon"><ion-icon name="menu-outline"></ion-icon></span>
+
+        <div class="logo-wrapper">
+            <a href="index.html"><img class="logo-img" src="Horizontal-color-logo.png" alt="logo"></a>
+            <span role="button" class="close-icon"><ion-icon name="close-circle-outline"></ion-icon></span>
+        </div>
 
         <nav>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="td-none active">Home</a></li>
+                <li class="nav-item"><a href="index.html" class="td-none">Home</a></li>
                 <li class="nav-item"><a href="index.html" class="td-none">Portfolio</a></li>
-                <li class="nav-item"><a href="index.html" class="td-none">Blog</a></li>
+                <li class="nav-item active"><a href="index.html" class="td-none">Blog</a></li>
                 <li class="nav-item"><a href="index.html" class="td-none">Journal</a></li>
             </ul>
         </nav>
 
-        <nav>
+        <nav class="auth-wrapper">
             <!--
             <ul class="nav-auth">
                 
@@ -39,10 +42,10 @@
                 
             </ul>
             -->
-             
+            
             <ul class="nav-user" >
                 <li class="nav-item">
-                    <a href="" class="td-none">Gerardo Schekaibán<ion-icon name="chevron-down-outline" class="nav-icon"></ion-icon></a>
+                    Gerardo Schekaibán<ion-icon name="chevron-down-outline" class="nav-icon"></ion-icon>
                     <ul class="dropdown">
                         <li class="" ><a href="" class="td-none" >Dashboard</a></li>
                         <li class="" ><a href="" class="td-none" >LogOut</a></li>
@@ -57,6 +60,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/js/navbarResp.js"></script>
 
 </body>
 </html>
