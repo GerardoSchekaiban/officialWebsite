@@ -3,7 +3,7 @@ const dropdown = document.querySelector('.dropdown');
 
 
 user.addEventListener('click', function(){
-    dropdown.classList.add('display');
+    dropdown.classList.toggle('display');
 });
 
 const menuIcon = document.querySelector('.menu-icon');
