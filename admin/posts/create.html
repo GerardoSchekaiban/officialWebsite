@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Create Post</title>
+
+    <!--Style CSS-->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/styles/adminStyle.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+         <!--Nav Menu-->
+        <aside class="navigation">
+            <ul>
+                <li>
+                    <a href="../dashboard.html">
+                        <img class="logo" src="../../assets/imgs/logo.png" alt="logo">
+                        <span class="title">Gerardo Schekaibán</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="blogPosts.html">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                        <span class="title">Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+                        <span class="title">Coments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+                        <span class="title">Topics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Users</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!--Main-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline" class="burger-icon"></ion-icon> 
+                </div>
+                <div class="user">
+                    <img src="../../assets/imgs/pp.png" alt="profile picture">
+                    <a href="" class="log-out td-none">LogOut</a>
+                </div>
+            </div>
+
+            
+
+            <!--Content-->
+            <div class="admin-container md-box">
+                <div class="main-title">
+                    <h1>Create Post</h1>
+                </div>
+
+                <form action="" method="post" class="admin-form" enctype="multipart/form-data">
+                    <ul class="form-errors">
+                        <li>Username required</li>
+                        <li>Username required</li>
+                    </ul>
+
+                    <div class="input-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" class="input-control">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="post-editor">Body</label>
+                        <div id="text-editor" class="text-editor"></div>
+                    </div>
+
+                    <div class="post-details">
+                        <div class="select-topic-wrapper">
+                            <div class="input-group">
+                                <label for="topic">Topic</label>
+                                <select name="topic_id" id="topic" class="input-control">
+                                    <option></option>
+                                    <option value="Software">Software</option>
+                                    <option value="Langauges">Languages</option>
+                                    <option value="Sports">Sports</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="image-wrapper">
+                            <input type="file" name="image" id="" class="hide image-input">
+                            <button type="button" class="btn-image bg-image">
+                                <span class="choose-image-label">
+                                    <ion-icon name="image-outline" class="image-outline"></ion-icon>
+                                    <span>Choose Image</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="published">
+                            <input type="checkbox" name="published" id="published">
+                            Publish
+                        </label>
+                    </div>
+
+                    <div class="input-group">
+                        <button type="submit" class="btn btn-big">Save</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+    <!--Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script src="../../assets/js/sidebarResp.js"></script>
+    <script src="../../assets/js/postQuillEditor.js"></script>
+
+
+    <script>
+        //Preview Post image
+
+        const imageBtn = document.querySelector('.btn-image');
+        const imageInput = document.querySelector('.image-input');
+        const chooseImgLabel = document.querySelector('.choose-image-label');
+
+        imageBtn.addEventListener('click', function(){
+           imageInput.click();
+        });
+
+        imageInput.addEventListener('change', function(){
+            const file = imageInput.files[0];
+            if(file){
+                const reader = new FileReader();
+                reader.onload = function(e){
+                    imageBtn.style.backgroundImage = `url(${e.target.result})`;
+                    imageBtn.style.height = '150px';
+                    imageBtn.style.border = 'none';
+                    chooseImgLabel.classList.toggle('hide');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

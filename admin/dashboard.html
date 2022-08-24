@@ -7,7 +7,7 @@
     <title>Admin Dashboard</title>
 
     <!--Style CSS-->
-    <link rel="stylesheet" href="../admin/adminStyle.css">
+    <link rel="stylesheet" href="../assets/styles/adminStyle.css">
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,19 +20,19 @@
         <aside class="navigation">
             <ul>
                 <li>
-                    <a href="#">
-                        <img class="logo" src="logo.png" alt="logo">
+                    <a href="dashboard.html">
+                        <img class="logo" src="../assets/imgs/logo.png" alt="logo">
                         <span class="title">Gerardo Schekaibán</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="active">
+                    <a href="dashboard.html">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="posts/blogPosts.html">
                         <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
                         <span class="title">Blog Posts</span>
                     </a>
@@ -62,15 +62,15 @@
         <div class="main">
             <div class="topbar">
                 <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon> 
+                    <ion-icon class="burger-icon" name="menu-outline"></ion-icon> 
                 </div>
                 <div class="user">
-                    <img src="pp.png" alt="profile picture">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img src="../assets/imgs/pp.png" alt="profile picture">
+                    <a href="" class="log-out td-none">LogOut</a>
                 </div>
             </div>
 
-            <div class="welcome-msg">
+            <div class="main-title">
                 <h1>Welcome to your admin Gerardo</h1>
             </div>
 
@@ -119,27 +119,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-        //Menu toggle
-        let toggle = document.querySelector('.toggle');
-        let navigation = document.querySelector('.navigation');
-        let main = document.querySelector('.main');
-
-        toggle.onclick = function(){
-            navigation.classList.toggle('active');
-            main.classList.toggle('active');
-
-        }
-
-        //Add hovered class in selected list item
-        let list = document.querySelectorAll('.navigation ul li');
-        function activeLink(){
-            list.forEach((item) =>
-            item.classList.remove('hovered'));
-            this.classList.add('hovered');
-        }
-        list.forEach((item) =>
-        item.addEventListener('mouseover', activeLink));
-    </script>
+    <script src="../assets/js/sidebarResp.js"></script>
 </body>
 </html>
