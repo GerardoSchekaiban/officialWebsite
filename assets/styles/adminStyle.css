@@ -28,6 +28,7 @@ body{
 
 hr{
     border: 1px solid #e2e9f3;
+    margin-bottom: 20px;
 }
 
 .center{
@@ -36,6 +37,10 @@ hr{
 
 .responsive-table{
     overflow-x: auto;
+}
+
+.responsive-table p{
+    margin-bottom: 15px;
 }
 
 .bg-image{
@@ -124,6 +129,14 @@ textarea.input-control{
 
 .btn-danger{
     background-color: #d33530;
+}
+
+.btn-danger:hover{
+    background-color: red;
+}
+
+.btn-standard{
+    background-color: gray;
 }
 
 .btn .icon{

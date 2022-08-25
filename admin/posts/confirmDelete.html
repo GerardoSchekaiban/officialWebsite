@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Create Topic</title>
+    <title>Admin - Confirm Delete</title>
 
     <!--Style CSS-->
     <link rel="stylesheet" href="../../assets/styles/adminStyle.css">
@@ -31,14 +31,14 @@
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-                <li>
-                    <a href="../posts/blogPosts.html">
+                <li class="active">
+                    <a href="blogPosts.html">
                         <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
                         <span class="title">Blog Posts</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="index.html">
+                <li>
+                    <a href="../topics/index.html">
                         <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
                         <span class="title">Topics</span>
                     </a>
@@ -73,27 +73,22 @@
             
 
             <!--Content-->
-            <div class="admin-container sm-box">
-                <div class="main-title">
-                    <h1>Create Topic</h1>
+                <div class="lg-box">
+                    <div class="main-title">
+                        <h1>Are you sure?</h1>
+                    </div>
+                    <hr>
+
+                    <div class="responsive-table" style="font-size: 1.2rem;">
+                        <p>Are you sure you want to delete the post title <strong>Sample Post</strong></p>
+                        <p style="color: red">This action CANNOT be undone</p>
+                        <div>
+                            <a href="#" class="btn btn-danger">Permanently Delete</a>
+                            <a href="blogPosts.html" class="btn btn-standard">Cancel</a>
+
+                        </div>
+                    </div>   
                 </div>
-
-                <form action="" method="post" class="admin-form">
-                    <div class="input-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" class="input-control">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="description">Description</label>
-                        <textarea name="description" id="description" class="input-control"></textarea>
-                    </div>
-
-                    <div class="input-group">
-                        <button type="submit" class="btn btn-big">Save</button>
-                    </div>
-                </form>
-            </div>
     </div>
 
     <!--Icons-->
@@ -101,6 +96,5 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="../../assets/js/sidebarResp.js"></script>
-
 </body>
 </html>
