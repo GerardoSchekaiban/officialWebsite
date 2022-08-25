@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin - Create User</title>
 
     <!--Style CSS-->
-    <link rel="stylesheet" href="../assets/styles/adminStyle.css">
+    <link rel="stylesheet" href="../../assets/styles/adminStyle.css">
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,37 +20,37 @@
         <aside class="navigation">
             <ul>
                 <li>
-                    <a href="dashboard.html">
-                        <img class="logo" src="../assets/imgs/logos/logo.png" alt="logo">
+                    <a href="../dashboard.html">
+                        <img class="logo" src="../../assets/imgs/logos/logo.png" alt="logo">
                         <span class="title">Gerardo Schekaibán</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="dashboard.html">
+                <li>
+                    <a href="../dashboard.html">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="posts/blogPosts.html">
+                    <a href="../posts/blogPosts.html">
                         <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
                         <span class="title">Blog Posts</span>
                     </a>
                 </li>
                 <li>
-                    <a href="topics/index.html">
+                    <a href="index.html">
                         <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
                         <span class="title">Topics</span>
                     </a>
                 </li>
                 <li>
-                    <a href="collections/index.html">
+                    <a href="../collections/index.html">
                         <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
                         <span class="title">Collections</span>
                     </a>
                 </li>
-                <li>
-                    <a href="users/index.html">
+                <li class="active">
+                    <a href="index.html">
                         <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                         <span class="title">Users</span>
                     </a>
@@ -62,56 +62,59 @@
         <div class="main">
             <div class="topbar">
                 <div class="toggle">
-                    <ion-icon class="burger-icon" name="menu-outline"></ion-icon> 
+                    <ion-icon name="menu-outline" class="burger-icon"></ion-icon> 
                 </div>
                 <div class="user">
-                    <img src="../assets/imgs/avatar/pp.png" alt="profile picture">
+                    <img src="../../assets/imgs/avatar/pp.png" alt="profile picture">
                     <a href="" class="log-out td-none">LogOut</a>
                 </div>
             </div>
 
-            <div class="main-title">
-                <h1>Welcome to your admin Gerardo</h1>
-            </div>
+            
 
-            <!--Cards-->
-            <div class="cardbox">
-                <div class="card">
-                    <div>
-                        <div class="card-number">20</div>
-                        <div class="card-name">Posts</div>
-                    </div>
-                    <div class="card-icon">
-                        <ion-icon name="newspaper-outline"></ion-icon>
-                    </div>
+            <!--Content-->
+            <div class="admin-container sm-box">
+                <div class="main-title">
+                    <h1>Create User</h1>
                 </div>
-                <div class="card">
-                    <div>
-                        <div class="card-number">20</div>
-                        <div class="card-name">Comments</div>
+
+                <form action="" method="post" class="admin-form">
+
+                    <div class="input-group avatar-input-group center">
+                        <input type="file" name="avatar" id="avatar" class="hide avatar-input">
+                        <button type="button" class="change-avatar-btn"><span>Change</span></button>
+                        <label for="avatar-input">Profile Image (Optional)</label>
                     </div>
-                    <div class="card-icon">
-                        <ion-icon name="newspaper-outline"></ion-icon>
+                
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="input-control">
                     </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-number">20</div>
-                        <div class="card-name">Users</div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="input-control">
                     </div>
-                    <div class="card-icon">
-                        <ion-icon name="newspaper-outline"></ion-icon>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="username" id="username" class="input-control">
                     </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-number">20</div>
-                        <div class="card-name">Views</div>
+
+                    <div class="input-group">
+                        <label for="password-conf">Password Confirmation</label>
+                        <input type="text" name="password-conf" id="password-conf" class="input-control">
                     </div>
-                    <div class="card-icon">
-                        <ion-icon name="newspaper-outline"></ion-icon>
+
+                    <div class="input-group">
+                        <label for="bio">Bio</label>
+                        <textarea name="bio" id="bio" class="input-control"></textarea>
                     </div>
-                </div>
+
+                    <div class="input-group">
+                        <button type="submit" class="btn btn-big">Save</button>
+                    </div>
+                </form>
             </div>
     </div>
 
@@ -119,6 +122,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script src="../assets/js/sidebarResp.js"></script>
+    <script src="../../assets/js/sidebarResp.js"></script>
+
 </body>
 </html>

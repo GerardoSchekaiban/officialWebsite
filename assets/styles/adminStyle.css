@@ -30,6 +30,10 @@ hr{
     border: 1px solid #e2e9f3;
 }
 
+.center{
+    text-align: center;
+}
+
 .responsive-table{
     overflow-x: auto;
 }
@@ -431,6 +435,38 @@ table .td-action-links a.edit{
 
 .admin-form .text-editor .ql-editor{
     min-height: inherit;
+}
+
+/*Avatar*/
+.admin-form .avatar-input-group .change-avatar-btn{
+    height: 150px;
+    width: 150px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    outline: none;
+    background-image: url(../imgs/avatar/avatar.png);
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.admin-form .avatar-input-group .change-avatar-btn span{
+    opacity: 0;
+}
+
+.admin-form .avatar-input-group .change-avatar-btn:hover span{
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 1.1rem;
+    transition: opacity 0.125s ease-in-out;
 }
 
 /* ############### DEFAULT CONTAINERS ############### */

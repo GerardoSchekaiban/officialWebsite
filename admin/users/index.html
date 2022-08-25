@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Users</title>
+
+    <!--Style CSS-->
+    <link rel="stylesheet" href="../../assets/styles/adminStyle.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+         <!--Nav Menu-->
+        <aside class="navigation">
+            <ul>
+                <li>
+                    <a href="../dashboard.html">
+                        <img class="logo" src="../../assets/imgs/logos/logo.png" alt="logo">
+                        <span class="title">Gerardo Schekaibán</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogPosts.html">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                        <span class="title">Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../topics/index.html">
+                        <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+                        <span class="title">Topics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../collections/index.html">
+                        <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+                        <span class="title">Collections</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Users</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!--Main-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline" class="burger-icon"></ion-icon> 
+                </div>
+                <div class="user">
+                    <img src="../../assets/imgs/avatar/pp.png" alt="profile picture">
+                    <a href="" class="log-out td-none">LogOut</a>
+                </div>
+            </div>
+
+            
+
+            <!--Content-->
+            <div class="admin-container">
+                <div class=" admin-container md-box">
+                    <div class="main-title">
+                        <h1>Users</h1>
+                    </div>
+                        <hr>
+
+                        <div class="table-actions">
+                            <div class="table-filters">
+                                <input type="text" name="search-term" id="search-user-input" placeholder="Search">
+                                <select name="filter-users" id="filter-user">
+                                    <option value="ALL">--Filter--</option>
+                                    <option value="NEWEST">Newest</option>
+                                    <option value="OLDEST">Oldest</option>
+                                    <option value="USER">User</option>
+                                    <option value="ADMIN">Admin</option>
+                                </select>
+                            </div>
+                            <div class="table-buttons">
+                                <a href="create.html" class="btn btn-small"><ion-icon name="add-circle" class="icon"></ion-icon>Add User</a>
+                            </div>
+                        </div>
+
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <th>ID</th>
+                                    <th>USERNAME</th>
+                                    <th>EMAIL</th>
+                                    <th>COMMENTS</th>
+                                    <th>ROLE</th>
+                                </thead>
+    
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="#">Gerardo Schekaiban</a>
+                                            <div class="td-action-links">
+                                                <a href="" class="trash">Delete</a>
+                                                <span class="inline-divider">|</span>
+                                                <a href="" class="edit">Edit</a>
+    
+                                            </div>
+                                        </td>
+                                        <td>ggschekaiban@hotmail.com</td>
+                                        <td>100</td>
+                                        <td>Admin</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                
+            </div>
+    </div>
+
+    <!--Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="../../assets/js/sidebarResp.js"></script>
+    <script>
+        const changeFeaturedPostBtn = document.querySelector('.change-featured-post');
+        const inputWrapper = document.querySelector('.input-wrapper');
+        const titleWrapper = document.querySelector('.title-wrapper');
+
+        changeFeaturedPostBtn.addEventListener('click', function(){
+            inputWrapper.classList.toggle('hide');
+            titleWrapper.classList.toggle('hide');
+
+        });
+
+    </script>
+</body>
+</html>
