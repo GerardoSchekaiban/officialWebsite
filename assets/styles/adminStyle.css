@@ -67,6 +67,13 @@ hr{
     display: inline-block;
 }
 
+textarea.input-control{
+    resize: none;
+    min-width: 100%;
+    min-height: 10rem;
+    
+}
+
 .input-control:focus{
     outline: 0;
     border: 1px solid var(--secondColor);
