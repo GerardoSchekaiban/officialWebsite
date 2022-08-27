@@ -24,11 +24,16 @@ body{
 
 .td-none{
     text-decoration: none;
+    color:var(--firstColor);
 }
 
 hr{
     border: 1px solid #e2e9f3;
     margin-bottom: 20px;
+}
+
+h2{
+    margin-bottom: 10px;
 }
 
 .center{
@@ -404,6 +409,38 @@ table .td-action-links a.trash{
 table .td-action-links a.edit{
     color: #00a2ff;
 }
+
+/*Twin Tables*/
+
+.twin-tables{
+    display: flex; 
+    justify-content: space-around;
+}
+
+.twin-tables table tbody tr:hover{
+    cursor: default;
+    background-color: #eef5fc;
+}
+
+.twin-tables table tbody tr .checkmark-icon{
+    color: green;
+    font-size: 1.2rem;
+}
+
+.twin-tables table tbody tr.selected .checkmark-icon{
+    display: block;
+}
+
+.twin-tables table tbody tr .close-icon{
+    color: red;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.twin-tables table tbody tr:hover .close-icon{
+    display: block;
+}
+
 
 /*Admin Forms*/
 
