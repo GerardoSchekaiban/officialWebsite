@@ -1,10 +1,13 @@
 const user = document.querySelector('.nav-user');
 const dropdown = document.querySelector('.dropdown');
-
+const header = document.querySelector('header');
+const body = document.querySelector('body');
 
 user.addEventListener('click', function(){
+    header.classList.toggle('bbottom-none');
     dropdown.classList.toggle('display');
 });
+
 
 const menuIcon = document.querySelector('.menu-icon');
 const navMenu = document.querySelector('.nav-menu');

@@ -204,6 +204,10 @@ header .nav-user:hover .dropdown{
     header{
         border-bottom: 1px solid lightgray;
     }
+
+    .bbottom-none{
+        border-bottom: none;
+    }
     
     header .menu-icon{
         display: block;
