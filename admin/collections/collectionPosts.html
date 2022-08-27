@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Collections</title>
+    <title>Admin - Collection Posts</title>
 
     <!--Style CSS-->
     <link rel="stylesheet" href="../../assets/styles/adminStyle.css">
@@ -31,8 +31,8 @@
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-                <li>
-                    <a href="../posts/blogPosts.html">
+                <li class="active">
+                    <a href="blogPosts.html">
                         <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
                         <span class="title">Blog Posts</span>
                     </a>
@@ -43,8 +43,8 @@
                         <span class="title">Topics</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="index.html">
+                <li>
+                    <a href="../collections/index.html">
                         <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
                         <span class="title">Collections</span>
                     </a>
@@ -73,48 +73,60 @@
             
 
             <!--Content-->
-                <div class="admin-container md-box">
-                    <div class="main-title">
-                        <h1>Blog Collections</h1>
-                    </div>
-                        <hr>
-
-                        <div class="msg success">
-                            <ion-icon name="checkmark-circle" class="msg-icon"></ion-icon>
-                            <span>Blog Collection created succesfull</span>
-                        </div>
-
+                <div class="twin-tables lg-box">
+                    <!--All Posts-->
+                    <div class="sm-box">
+                        <h2>All Posts</h2>
                         <div class="table-actions">
-                            <span></span>
-                            <a href="create.html" class="btn btn-small"><ion-icon name="add-circle" class="icon"></ion-icon>Add Collection</a> 
+                            <input type="text" name="search-term" id="search-post-input" placeholder="Search">
                         </div>
 
                         <div class="responsive-table">
                             <table>
                                 <thead>
                                     <th>ID</th>
-                                    <th>COLLECTION TITLE</th>
-                                    <th># OF POSTS</th>
+                                    <th>TITLE</th>
+                                </thead>
+    
+                                <tbody>
+                                    <tr class="selected">
+                                        <td>1</td>
+                                        <td>First Post</td>
+                                        <td><ion-icon name="checkmark-done-outline" class="hide checkmark-icon"></ion-icon></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--Collection Posts-->
+                    <div class="sm-box">
+                        <h2>Collection Posts for: <a href="#" target="_blank" class="td-none"><u>Sports</u></a></h2>
+                        <p>Drag and drop items</p>
+
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <th>ID</th>
+                                    <th>TITLE</th>
                                 </thead>
     
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>
-                                            <a href="#">English</a>
-                                            <div class="td-action-links">
-                                                <a href="" class="trash">Delete</a>
-                                                <span class="inline-divider">|</span>
-                                                <a href="" class="edit">Edit</a>
-                                                <span class="inline-divider">|</span>
-                                                <a href="collectionPosts.html" class="edit">Posts</a>
-                                            </div>
-                                        </td>
-                                        <td>5</td>
+                                        <td>First Post</td>
+                                        <td><ion-icon name="close-outline" class="hide close-icon"></ion-icon></td>
                                     </tr>
                                 </tbody>
+                                <tfoot>
+                                    <td colspan="6">
+                                        <button class="btn btn-primary btn-long">Save Collection posts</button>
+                                    </td>
+                                </tfoot>
                             </table>
                         </div>
+                    </div>
+ 
                 </div>
     </div>
 
