@@ -39,113 +39,100 @@ li{
     color: inherit;
 }
 
-/* ############### COMPONENTS ############### */
-header{
-    width: 100%;
-    height: 80px;
-    padding: 0 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .menu-icon{
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--firstColor);
-    display: none;
-}
-
-header .close-icon{
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--firstColor);
-    display: none;
-}
-
-nav{
-    height: inherit;
-}
-
-.logo-img{
-    width: 12rem;
-}
-
-header .nav-menu,
-header .nav-auth,
-header .nav-user{
-    height: 80px;
-    width: 30rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-header .nav-auth,
-header .nav-user{
-    width: 13rem;
-}
-
-header .nav-user{
-    justify-content: space-between;
-}
-
-
-header .nav-user .nav-item{
-    position: relative;
-}
-
-header .nav-menu .nav-item a{
-    color: var(--firstColor);
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-}
-
-header .nav-menu .nav-item a:hover{
-    color: var(--secondColor);
-}
-
 .active{
     font-weight: 700;
 }
 
-header .nav-auth .sign-in a,
-header .nav-auth .sign-up a{
+.hide{
+    display: none;
+}
+
+/* ############### COMPONENTS ############### */
+header{
+    max-width: 1500px;
+    width: 100vw;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+header .menu-icon, .close-icon{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--firstColor);
+    display: none;
+}
+
+/*Nav*/
+header .nav{
+    height: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav-logo .logo-img{
+    width: 12rem;
+}
+
+header .nav .nav-menu{
+    display: flex;
+}
+
+header .nav-menu .nav-item a{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    padding: 0 15px;
+}
+
+header .nav .nav-auth{
+    display: flex;
+}
+
+header .nav .sign-in a,
+header .nav .sign-up a{
     color: var(--secondColor);
     font-size: 1.2rem;
-    padding: 8px 15px;
+    margin: 5px;
+    padding: 8px 12px;
     border: 2px solid var(--secondColor);
     border-radius: 10px;
     transition:  all ease 0.5s;
 }
 
-header .nav-auth .sign-in a:hover,
-header .nav-auth .sign-up a:hover{
+header .nav .sign-in a:hover,
+header .nav .sign-up a:hover{
     color: var(--whiteColor);
     background-color: var(--secondColor);
 }
 
-header .nav-user li{
+header .nav .nav-auth .nav-item{
+    position: relative;
+}
+
+header .nav .nav-auth .nav-item.user{
     display: block;
-    color: var(--firstColor);
-    font-size: 1.2rem;
-    font-weight: 700;
+    height: 80px;
     padding: 30px 0;
 }
 
-.nav-icon{
-    color: var(--firstColor);
+header .nav-auth .nav-item span, a{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+.arrow-down-icon{
     margin-left: 5px;
     transform: translateY(4px);
 }
 
-/*DROPDOWN*/
-
-header .nav-user .dropdown{
+header .nav .nav-auth .nav-item .dropdown{
     width: 190px;
     position: absolute;
     top: 80px;
-    left: -10px;
+    left: 0px;
     z-index: -10;
     border-radius: 5px;
     box-shadow: -1px -12px 28px 7px rgba(0,0,0,0.11);
@@ -155,7 +142,7 @@ header .nav-user .dropdown{
     transform: translateY(35px);
 }
 
-header .nav-user .dropdown::after{
+header .nav .nav-auth .dropdown::after{
     content: '';
     position: absolute;
     top: -20px;
@@ -166,24 +153,24 @@ header .nav-user .dropdown::after{
     border-right: 10px solid transparent;
 }
 
-header .nav-user .dropdown li{
+header .nav-auth .dropdown li{
     border-bottom: 1px solid #dfeef3;
 }
 
-header .nav-user .dropdown li:last-child{
+header .nav-auth .dropdown li:last-child{
     border-bottom: 1px solid transparent;
 }
 
-.nav-user .dropdown li{
+.nav-auth .dropdown li{
     padding: 16px;
 }
 
-.nav-user .dropdown a:hover{
+.nav-auth .dropdown a:hover{
     color: var(--secondColor);
 }
 
 /*DROPDOWN ANIMATION*/
-header .nav-user:hover .dropdown{
+header .nav-auth .user:hover .dropdown{
     opacity: 1;
     z-index: 5;
     transform: translateY(0);
@@ -199,33 +186,23 @@ header .nav-user:hover .dropdown{
     }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 920px){
 
     header{
-        border-bottom: 1px solid lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .bbottom-none{
-        border-bottom: none;
+    header .nav{
+        justify-content: flex-end;
     }
-    
+
     header .menu-icon{
         display: block;
     }
-
-    header .menu-icon.no-display{
-        display: none;
-    }
-
-    header .auth-wrapper.no-display{
-        display: none;
-    }
-
-    header .close-icon.display{
-        display: block;
-    }
-
-    header .logo-wrapper{
+    
+    header .nav-logo{
         position: fixed;
         left: 0;
         top:0;
@@ -237,19 +214,14 @@ header .nav-user:hover .dropdown{
         padding: 0 30px;
         transform: translateX(-100%);
         transition: all 0.5s ease-in-out;
-    }   
+    }  
 
-    header .logo-wrapper.open{
+    header .nav-logo.open{
         transform: translateX(0);
         transition: all 0.5s ease-in-out;
     }
 
-    .logo-img{
-        height: 80px;
-        object-fit:cover;
-    }
-
-    header .nav-menu{
+    header .nav .nav-menu{
         position: fixed;
         left: 0;
         top: 80px;
@@ -282,23 +254,28 @@ header .nav-user:hover .dropdown{
         color: var(--firstColor);
     }
 
-    header .nav-user .dropdown{
-        display: none;
-    }
-
-    header .nav-user .dropdown.display{
-        display: block;
-    }
-
     .active{
         background-color: var(--secondColor);
         border-radius: 25px;
     }
+
+    header .menu-icon.no-display{
+        display: none;
+    }
+
+    header .nav-auth.no-display{
+        display: none;
+    }
+
+    header .close-icon.display{
+        display: block;
+    }
+
+    header .nav-auth .dropdown{
+        display: none;
+    }
+
+    header .nav-auth .dropdown.display{
+        display: block;
+    }
 }
-
-
-
-
-
-
-/* ############### PAGES ############### */
