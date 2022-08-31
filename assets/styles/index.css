@@ -303,10 +303,11 @@ header .nav-auth .user:hover .dropdown{
 /*Post Card*/
 
 .post-card{
-    height: 480px;
+    height: 500px;
     width: 352px;
     border-radius: 3px;
     overflow: hidden;
+    margin: 0 20px;
 }
 
 .post-card .img-wrapper{
@@ -355,18 +356,47 @@ header .nav-auth .user:hover .dropdown{
     color: var(--thirdColor);
 }
 
+/*CAROUSEL*/
+
+.carousel-container{
+    position: relative;
+}
+
+.carousel-container .slick-list{
+    margin: 0 -20px;
+}
+
+.carousel-container .slider-arrow{
+    position: absolute;
+    bottom: 0;
+    min-height: 500px;
+    font-size: 2rem;
+    z-index: 20;
+    background-color: transparent;
+    border: none;
+}
+
+.carousel-container .slider-arrow.slick-disabled{
+    display: none !important;
+}
+
+.carousel-container .next-arrow{
+    right: -40px;
+}
+
+.carousel-container .preview-arrow{
+    left: -40px;
+}
 
 /* ############### PAGES ############### */
 
 /*BLOG PAGE*/
 
 .page-container{
-    max-width: 1300px;
+    max-width: 1200px;
     min-height: calc(100vh - 80px - 400px);
     margin: 0 auto;
     padding: 32px;
-    display: flex;
-    justify-content: space-around;
 }
 
 .page-footer{
