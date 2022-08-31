@@ -328,7 +328,7 @@ textarea.input-control{
     cursor: pointer;
  }
 
- .user{
+ .user-admin{
      display: flex;
      align-items: center;
      justify-content: space-between;
