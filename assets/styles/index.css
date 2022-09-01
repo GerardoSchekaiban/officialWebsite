@@ -306,11 +306,11 @@ header .nav-auth .user:hover .dropdown{
 /*Post Card*/
 
 .post-card{
-    height: 500px;
-    width: 352px;
+    height: 480px;
     border-radius: 3px;
+    box-shadow: 0 18px 18px -5px #6991bb;
     overflow: hidden;
-    margin: 0 20px;
+    margin: 0px 10px 30px;
 }
 
 .post-card .img-wrapper{
@@ -323,7 +323,6 @@ header .nav-auth .user:hover .dropdown{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .post-card .post-info .top-info{
@@ -366,7 +365,7 @@ header .nav-auth .user:hover .dropdown{
  
 
 .carousel-container .slick-list{
-    margin: 0 -20px;
+    margin: 0 -10px;
 }
 
 .carousel-container .slider-arrow{
@@ -384,11 +383,11 @@ header .nav-auth .user:hover .dropdown{
 }
 
 .carousel-container .next-arrow{
-    right: -40px;
+    right: -50px;
 }
 
 .carousel-container .preview-arrow{
-    left: -40px;
+    left: -50px;
 }
 
 /* ############### PAGES ############### */
@@ -404,8 +403,20 @@ header .nav-auth .user:hover .dropdown{
 
 @media only screen and (max-width: 920px){
     .page-container{
-        padding: 15px;
+        padding: 20px;
     }
+
+    .carousel-container .next-arrow{
+        right: -60px;
+    }
+    
+    .carousel-container .preview-arrow{
+        left: -60px;
+    }
+}
+
+.page-section{
+    margin: 0 auto 32px;
 }
 
 .page-footer{
