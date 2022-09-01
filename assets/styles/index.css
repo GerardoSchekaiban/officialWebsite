@@ -19,6 +19,7 @@ body{
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     background-color: #fbfdff;
     font-family: var(--font);
     -webkit-font-smoothing: antialiased; /* Makes the font look better (apple devices)*/
@@ -224,6 +225,7 @@ header .nav-auth .user:hover .dropdown{
         position: fixed;
         left: 0;
         top:0;
+        z-index: 25;
         width: 100%;
         height: 80px;
         display: flex;
@@ -244,7 +246,8 @@ header .nav-auth .user:hover .dropdown{
         position: fixed;
         left: 0;
         top: 80px;
-        height: 100%;
+        z-index: 25;
+        height: 100vh;
         width: 100%;
         flex-direction: column;
         justify-content: start;
@@ -319,7 +322,7 @@ header .nav-auth .user:hover .dropdown{
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -351,7 +354,6 @@ header .nav-auth .user:hover .dropdown{
 }
 
 .bottom-info .name,
-
 .bottom-info .post-date{
     color: var(--thirdColor);
 }
@@ -362,8 +364,8 @@ header .nav-auth .user:hover .dropdown{
     position: relative;
 }
 
-.carousel-container .slick-list{
-    margin: 0 -20px;
+.carousel-container .carousel-header{
+    margin-left: 20px;
 }
 
 .carousel-container .slider-arrow{
