@@ -363,9 +363,10 @@ header .nav-auth .user:hover .dropdown{
 .carousel-container{
     position: relative;
 }
+ 
 
-.carousel-container .carousel-header{
-    margin-left: 20px;
+.carousel-container .slick-list{
+    margin: 0 -20px;
 }
 
 .carousel-container .slider-arrow{
@@ -399,6 +400,12 @@ header .nav-auth .user:hover .dropdown{
     min-height: calc(100vh - 80px - 400px);
     margin: 0 auto;
     padding: 32px;
+}
+
+@media only screen and (max-width: 920px){
+    .page-container{
+        padding: 15px;
+    }
 }
 
 .page-footer{
