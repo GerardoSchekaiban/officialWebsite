@@ -390,6 +390,32 @@ header .nav-auth .user:hover .dropdown{
     left: -50px;
 }
 
+/*PROJECT*/
+.project-container{
+    display: flex;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    width: 400px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0px 10px 30px;
+}
+
+.project-img{
+    width: 100%;
+}
+
+.project-descrip{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #171717;
+}
+
 /*FOOTER*/
 .page-footer{
     height: 450px;
